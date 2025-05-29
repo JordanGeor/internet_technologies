@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Σκοπός</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script> <!-- Καλούμε το script.js -->
+</head>
+<body>
+  <nav>
+    <ul>
+      <div class="menu-left">
+        <li><a href="index.html">Αρχική Σελίδα</a></li>
+        <li><a href="skopos.html">Σκοπός</a></li>
+        <li><a href="help.html">Βοήθεια</a></li>
+        <!-- Οι αυθεντικοποιημένες επιλογές -->
+            <li id="profile-menu" style="display: none;"><a href="profile.html">Profile</a></li>
+            <li id="tasks-menu" style="display: none;"><a href="tasks.html">My Tasks</a></li>
+            <li id="logout-menu" style="display: none;"><a href="logout.html">Logout</a></li>
+            <!-- Οι μη αυθεντικοποιημένες επιλογές -->
+            <li id="login-menu"><a href="login.php">Σύνδεση Χρήστη</a></li>
+            <li id="signup-menu"><a href="register.php">Εγγραφή Χρήστη</a></li>
+            <li><button id="theme-toggle">Εναλλαγή Θέματος</button></li>
+        </ul>
+      </div>
+  </nav>
+
+
+  <header>
+    <h1>Σκοπός Ιστοτόπου</h1>
+  </header>
+
+  <main>
+    <section class="accordion">
+      <h2 class="accordion-header">Ποιος είναι ο σκοπός του ιστοτόπου;</h2>
+      <div class="accordion-content">
+        <p>Ο ιστότοπος δημιουργήθηκε ως μέρος του μαθήματος Τεχνολογίες Διαδικτύου.</p>
+      </div>
+
+      <h2 class="accordion-header">Πώς μπορεί κάποιος να εγγραφεί και γιατί;</h2>
+      <div class="accordion-content">
+        <p>Ο χρήστης μπορεί να εγγραφεί μέσω της σελίδας "Εγγραφή Χρήστη", για να έχει πρόσβαση στη σελίδα μας.</p>
+      </div>
+     </div>
+    </section>
+  </main>
+  
+ <footer>
+    <p>&copy; Ιόνιο Πανεπιστήμιο - Τμήμα Πληροφορικής</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,49 @@
+
+services:
+  web:
+    build: .
+    container_name: php-web
+    ports:
+      - "8080:80"  # Τοπική θύρα 8080 για πρόσβαση στην ιστοσελίδα
+    volumes:
+      - ./src:/var/www/html  # Αντιστοίχιση του τοπικού φακέλου
+    networks:
+      - webnet
+    depends_on:
+      - mysql  # Εξάρτηση από MySQL
+
+  mysql:
+    image: mysql:8.0
+    container_name: mysql_container
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: "123"
+      MYSQL_DATABASE: "my_users_db"
+      MYSQL_USER: "jordan"
+      MYSQL_PASSWORD: "123"
+    ports:
+      - "3306:3306"
+    volumes:
+      - db_data:/var/lib/mysql
+    networks:
+      - webnet
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: phpmyadmin
+    restart: always
+    environment:
+      PMA_HOST: mysql
+      MYSQL_ROOT_PASSWORD: "123"
+    ports:
+      - "8081:80"
+    depends_on:
+      - mysql
+    networks:
+      - webnet
+
+volumes:
+  db_data:
+
+networks:
+  webnet:
