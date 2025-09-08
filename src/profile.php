@@ -1,6 +1,8 @@
 <?php 
 session_start();
+require_once 'auth_check.php';
 require 'config.php'; // Σύνδεση με τη βάση δεδομένων
+
 
 // Έλεγχος αν ο χρήστης είναι συνδεδεμένος
 if (!isset($_SESSION['user_id'])) {

@@ -7,6 +7,7 @@ if (!isset($_SESSION['loggedin'])) {
 
 include 'config.php';
 include 'navprofile.php';
+require_once 'auth_check.php';
 
 $user_id = $_SESSION['user_id'];
 

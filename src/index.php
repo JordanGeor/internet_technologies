@@ -1,5 +1,6 @@
 <?php
 // Ξεκινάμε τη συνεδρία
+
 session_start();
 include 'config.php';
 
